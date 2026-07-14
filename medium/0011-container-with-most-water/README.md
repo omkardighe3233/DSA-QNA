@@ -37,34 +37,33 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-07-14T08:33:28.422Z  
+**Runtime:** 5 ms (beats 82.64%)  
+**Memory:** 77.3 MB (beats 68.74%)  
+**Submitted:** 2026-07-14T08:33:39.351Z  
 
 ```java
-class Solution {
-    public int maxArea(int[] height) 
-    {
-       int lp = 0;
-       int rp = height.length-1;
-       int currwater=0;
-        while(lp<rp)
-        {
-            int hig = Math.min(height[lp],height[rp]);
-            int wid = rp-lp;
-            currwater = Math.max( wid*hig , currwater );
-            if(height[lp] < height[rp])
-            {
-                lp++;
-            }
-            else{
-                rp--;
-            }
-        }
-       return currwater; 
-    }
+class Solution {
+    public int maxArea(int[] height) 
+    {
+       int lp = 0;
+       int rp = height.length-1;
+       int currwater=0;
+        while(lp<rp)
+        {
+            int hig = Math.min(height[lp],height[rp]);
+            int wid = rp-lp;
+            currwater = Math.max( wid*hig , currwater );
+            if(height[lp] < height[rp])
+            {
+                lp++;
+            }
+            else{
+                rp--;
+            }
+        }
+       return currwater; 
+    }
 }
-
 ```
 
 ---
