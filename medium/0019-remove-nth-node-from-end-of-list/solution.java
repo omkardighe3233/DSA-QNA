@@ -1,37 +1,38 @@
-import java.util.*;
-
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
 class Solution {
-    public List<List<Integer>> threeSum(int[] nums) {
-
-        List<List<Integer>> fin = new ArrayList<>();
-        Arrays.sort(nums); 
-
-        for (int i = 0; i < nums.length - 2; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) continue;
-
-            int left = i + 1;
-            int right = nums.length - 1;
-
-            while (left < right) {
-                int sum = nums[i] + nums[left] + nums[right];
-
-                if (sum == 0) {
-                    fin.add(Arrays.asList(nums[i], nums[left], nums[right]));
-
-                    while (left < right && nums[left] == nums[left + 1]) left++;
-                    while (left < right && nums[right] == nums[right - 1]) right--;
-
-                    left++;
-                    right--;
-                }
-                else if (sum < 0) {
-                    left++;
-                }
-                else {
-                    right--;
-                }
-            }
+    public ListNode removeNthFromEnd(ListNode head, int n) 
+    {
+        ListNode temp = head;
+        int i=0;
+        while(temp != null )
+        {
+           i++;
+           temp = temp.next;
         }
-        return fin;
+        if(n == i)
+        {
+            head = head.next;
+            return head;
+        }
+        temp = head;
+        n = i-n;
+        i=1;
+        
+        while(i != n )
+        {
+            i++;
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        return head;
     }
 }
