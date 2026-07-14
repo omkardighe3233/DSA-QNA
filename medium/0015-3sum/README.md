@@ -45,9 +45,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 33 ms (beats 73.93%)  
-**Memory:** 59.5 MB (beats 24.65%)  
-**Submitted:** 2026-07-14T08:37:40.216Z  
+**Runtime:** 34 ms (beats 61.47%)  
+**Memory:** 59.4 MB (beats 32.86%)  
+**Submitted:** 2026-07-14T08:39:17.170Z  
 
 ```java
 import java.util.*;
