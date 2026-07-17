@@ -37,19 +37,30 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-07-17T11:44:35.016Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.1 MB (beats 36.15%)  
+**Submitted:** 2026-07-17T11:45:02.602Z  
 
 ```java
 class Solution {
-    public int climbStairs(int n) 
-    {
-        if(n==1 || n==2) return n;
-        //int ans = 1;
-        
-        return climbStairs(n-1) + climbStairs(n-2);
-        
+    public int climbStairs(int n) {
+
+        if (n <= 2)
+            return n;
+
+        ArrayList<Integer> kk = new ArrayList<>();
+
+        kk.add(1);
+        kk.add(2);
+
+        while (kk.size() < n) {
+            int last = kk.get(kk.size() - 1);
+            int secondLast = kk.get(kk.size() - 2);
+
+            kk.add(last + secondLast);
+        }
+
+        return kk.get(kk.size() - 1);
     }
 }
 ```
