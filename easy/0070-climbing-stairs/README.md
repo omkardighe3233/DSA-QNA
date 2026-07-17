@@ -38,29 +38,18 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-07-17T11:19:55.500Z  
+**Memory:** 41.9 MB  
+**Submitted:** 2026-07-17T11:44:35.016Z  
 
 ```java
 class Solution {
-    public int lengthOfLastWord(String s) 
+    public int climbStairs(int n) 
     {
-       s = s.trim();
-
-    if(s.length()==0 || s.length()==1 ) return s.length();
-       int i = s.length()-1;
-       int count = 0;
-       char ch = ' ';
-      while(s.charAt(i) != ch)
-      {
-            i--;
-            count++;
-            if(i==-1)
-            {
-                return count;
-            }
-      }
-      return count;
+        if(n==1 || n==2) return n;
+        //int ans = 1;
+        
+        return climbStairs(n-1) + climbStairs(n-2);
+        
     }
 }
 ```
