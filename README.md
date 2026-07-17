@@ -6,8 +6,8 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Solved | 22 |
-| Easy | 15 |
+| Total Solved | 23 |
+| Easy | 16 |
 | Medium | 7 |
 | Hard | 0 |
 | Current Streak | 1 days |
@@ -17,7 +17,7 @@
 
 | Language | Solutions |
 |----------|-----------|
-| Java | 22 |
+| Java | 23 |
 
 ---
-*Last updated: 2026-07-17T11:44:41.553Z*
+*Last updated: 2026-07-17T11:47:17.910Z*
