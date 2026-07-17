@@ -11,6 +11,10 @@ class Solution {
       {
             i--;
             count++;
+            if(i==-1)
+            {
+                return count;
+            }
       }
       return count;
     }
