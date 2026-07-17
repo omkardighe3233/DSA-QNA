@@ -41,9 +41,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-07-17T10:52:35.480Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.9 MB (beats 84.59%)  
+**Submitted:** 2026-07-17T10:52:42.537Z  
 
 ```java
 class Solution {
@@ -59,6 +59,10 @@ class Solution {
       {
             i--;
             count++;
+            if(i==-1)
+            {
+                return count;
+            }
       }
       return count;
     }
