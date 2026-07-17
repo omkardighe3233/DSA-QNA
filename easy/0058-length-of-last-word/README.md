@@ -42,28 +42,27 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-07-17T10:40:47.716Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-07-17T10:42:08.740Z  
 
 ```java
-class Solution {
-    public int lengthOfLastWord(String s) 
-    {
-       
-       s = s.trim();
-       int i = s.length()-1;
-       int count = 0;
-       char ch = ' ';
-      while(s.charAt(i) != ch)
-      {
-            i--;
-            count++;
-      }
-      return count;
-    }
+class Solution {
+    public int lengthOfLastWord(String s) 
+    {
+       
+       s = s.trim();
 
+       int i = s.length()-1;
+       int count = 0;
+       char ch = ' ';
+      while(s.charAt(i) != ch)
+      {
+            i--;
+            count++;
+      }
+      return count;
+    }
 }
-
 ```
 
 ---
