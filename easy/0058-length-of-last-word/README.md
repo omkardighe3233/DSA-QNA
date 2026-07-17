@@ -43,13 +43,13 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.6 MB  
-**Submitted:** 2026-07-17T10:42:21.988Z  
+**Submitted:** 2026-07-17T10:48:11.806Z  
 
 ```java
 class Solution {
     public int lengthOfLastWord(String s) 
     {
-       
+    if(s.length()==0 || s.length()==1 ) return s.length();
        s = s.trim();
 
        int i = s.length()-1;
