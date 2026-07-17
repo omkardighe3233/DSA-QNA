@@ -1,21 +1,10 @@
 class Solution {
-    public int lengthOfLastWord(String s) 
+    public int climbStairs(int n) 
     {
-       s = s.trim();
-
-    if(s.length()==0 || s.length()==1 ) return s.length();
-       int i = s.length()-1;
-       int count = 0;
-       char ch = ' ';
-      while(s.charAt(i) != ch)
-      {
-            i--;
-            count++;
-            if(i==-1)
-            {
-                return count;
-            }
-      }
-      return count;
+        if(n==1 || n==2) return n;
+        //int ans = 1;
+        
+        return climbStairs(n-1) + climbStairs(n-2);
+        
     }
 }
