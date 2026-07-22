@@ -36,29 +36,23 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-07-22T17:52:19.247Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.5 MB (beats 92.46%)  
+**Submitted:** 2026-07-22T17:55:24.840Z  
 
 ```java
 class Solution {
     public int search(int[] nums, int target) 
     {
-        int n= nums.length-1;
-     
-     while(n>=0 || n<nums.length){
-           if( nums[n/2] < target)
+        int n= nums.length;
+       for(int i=0;i<n;i++)
+       {
+        if(nums[i]==target)
         {
-            n--;
-        }else if(nums[n/2] ==target){
-            n++;
-        }else{
-
-            n= (n/2)+1;
-            return n;
+            return i;
         }
-    }
-        return -1;
+       }
+     return -1;
     }
 }
 ```
