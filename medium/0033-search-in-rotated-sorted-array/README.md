@@ -37,31 +37,30 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-07-22T17:48:58.724Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-07-22T17:49:29.488Z  
 
 ```java
-class Solution {
-    public int search(int[] nums, int target) 
-    {
-        int n= nums.length;
-     
-        {
-            n--;
-        }else if(nums[n/2] ==target){
-        return -1;
-            n++;
-        }else{
-            n= (n/2)+1;
-        }
-    }
-    }
-     while(n>=0 || n<nums.length){
-           if( nums[n/2] < target)
+class Solution {
+    public int search(int[] nums, int target) 
+    {
+        int n= nums.length-1;
+     
+     while(n>=0 || n<nums.length){
+           if( nums[n/2] < target)
+        {
+            n--;
+        }else if(nums[n/2] ==target){
+            n++;
+        }else{
 
-            return n;
+            n= (n/2)+1;
+            return n;
+        }
+    }
+        return -1;
+    }
 }
-
 ```
 
 ---
