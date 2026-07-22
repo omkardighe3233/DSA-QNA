@@ -9,10 +9,12 @@ class Solution {
         return -1;
             n++;
         }else{
-            return n/2;
+            n= (n/2)+1;
         }
     }
     }
      while(n>=0 || n<nums.length){
            if( nums[n/2] < target)
+
+            return n;
 }
