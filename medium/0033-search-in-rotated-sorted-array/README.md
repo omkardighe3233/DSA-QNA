@@ -38,7 +38,7 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.4 MB  
-**Submitted:** 2026-07-22T17:47:48.224Z  
+**Submitted:** 2026-07-22T17:48:58.724Z  
 
 ```java
 class Solution {
@@ -52,12 +52,14 @@ class Solution {
         return -1;
             n++;
         }else{
-            return n/2;
+            n= (n/2)+1;
         }
     }
     }
      while(n>=0 || n<nums.length){
            if( nums[n/2] < target)
+
+            return n;
 }
 
 ```
