@@ -53,41 +53,44 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-07-23T14:26:01.407Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.9 MB (beats 83.90%)  
+**Submitted:** 2026-07-23T14:41:06.461Z  
 
 ```java
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; 
- this.next = next; }
- * }
- */
-class Solution {
-    public ListNode swapPairs(ListNode head) {
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode swapPairs(ListNode head) {
 
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-            prev = first;
-        ListNode prev = dummy;
-            ListNode second = first.next;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
 
-            prev.next = second;
+        ListNode prev = dummy;
 
+        while (prev.next != null && prev.next.next != null) {
 
+            ListNode first = prev.next;
+            ListNode second = first.next;
 
+            first.next = second.next;
+            second.next = first;
+            prev.next = second;
 
-        while (prev.next != null && prev.next.next != 
-            ListNode first = prev.next;
-            first.next = second.next;
-            second.next = first;
-        }
+            prev = first;
+        }
 
-        return dummy.next;
-        null) {
-    }
+        return dummy.next;
+    }
 }
-
 ```
 
 ---
