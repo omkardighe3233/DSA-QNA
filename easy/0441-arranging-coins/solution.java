@@ -5,7 +5,7 @@ class Solution {
         {
             count = count + i;
         }
-        return 0;
+        return 1;
         int count = 0;
             
             if(count>n)
