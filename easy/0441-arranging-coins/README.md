@@ -32,15 +32,15 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 42 MB  
-**Submitted:** 2026-07-31T15:00:43.542Z  
+**Runtime:** 9 ms (beats 8.42%)  
+**Memory:** 42.7 MB (beats 44.54%)  
+**Submitted:** 2026-07-31T15:01:21.788Z  
 
 ```java
 class Solution {
     public int arrangeCoins(int n) 
     {
-        int count = 0;
+        long count = 0;
         for(int i = 1; i<=n ; i++)
         {
             count = count + i;
