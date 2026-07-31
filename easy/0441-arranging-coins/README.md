@@ -32,26 +32,14 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-07-31T15:08:48.458Z  
+**Runtime:** 1 ms (beats 100.00%)  
+**Memory:** 42.4 MB (beats 91.83%)  
+**Submitted:** 2026-07-31T15:08:52.290Z  
 
 ```java
 class Solution {
-    public int arrangeCoins(int n) 
-    {
-        long count = 0;
-        for(int i = 1; i<=n ; i++)
-        {
-            count = count + i;
-            
-            if(count>n)
-            {
-                i = i-1;
-                return i;
-            }
-        }
-        return 1;
+    public int arrangeCoins(int n) {
+        return (int)((Math.sqrt(8.0 * n + 1) - 1) / 2);
     }
 }
 ```
