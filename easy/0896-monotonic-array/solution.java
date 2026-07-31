@@ -1,16 +1,36 @@
 class Solution {
     public boolean isMonotonic(int[] nums) 
     {
-        HashSet<Integer> check = new HashSet<>();
-        for(int i=0;i<nums.length;i++)
+        int l=0;
+        int r= nums.length-1;
+       
+       if(nums[l]<nums[r])
+       {
+        while(l<r)
         {
-            if(check.contains(nums[i]))
-            {
-                return true;
-            }else{
-                check.add(nums[i]);
-            }
+           if(nums[l]> nums[r])
+           {
+           return false; 
+           }
+           else{
+            l++;
+           }
         }
+        return true;
+
+       }
+       else if( nums[l] > nums[r] ){
+        while(l<r)
+        {
+           if(nums[l] < nums[r])
+           {
+           return false; 
+           }else{
+            l++;
+           }
+        }
+        return true;
+       }
         return false;
     }
 }
