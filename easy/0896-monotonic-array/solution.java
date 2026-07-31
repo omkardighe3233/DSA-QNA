@@ -31,6 +31,6 @@ class Solution {
         }
         return true;
        }
-        return false;
+        return true;
     }
 }
