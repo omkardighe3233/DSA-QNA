@@ -32,29 +32,28 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-07-31T14:56:00.291Z  
+**Runtime:** 1 ms  
+**Memory:** 42 MB  
+**Submitted:** 2026-07-31T15:00:43.542Z  
 
 ```java
-class Solution {
-    public int arrangeCoins(int n) 
-    {
-        for(int i = 1; i<=n ; i++)
-        {
-            count = count + i;
-        }
-        return 1;
-        int count = 0;
-            
-            if(count>n)
-            {
-                return i;
-            }
-    }
-                i = i-1;
+class Solution {
+    public int arrangeCoins(int n) 
+    {
+        int count = 0;
+        for(int i = 1; i<=n ; i++)
+        {
+            count = count + i;
+            
+            if(count>n)
+            {
+                i = i-1;
+                return i;
+            }
+        }
+        return 1;
+    }
 }
-
 ```
 
 ---
