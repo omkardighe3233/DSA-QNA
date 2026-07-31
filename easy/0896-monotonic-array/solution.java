@@ -1,0 +1,16 @@
+class Solution {
+    public boolean isMonotonic(int[] nums) 
+    {
+        HashSet<Integer> check = new HashSet<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            if(check.contains(nums[i]))
+        }
+        return false;
+            {
+                return true;
+            }else{
+                check.add(nums[i]);
+            }
+    }
+}
