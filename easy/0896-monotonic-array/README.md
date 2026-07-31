@@ -40,27 +40,26 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-07-31T15:15:27.536Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-07-31T15:17:15.239Z  
 
 ```java
-class Solution {
-    public boolean isMonotonic(int[] nums) 
-    {
-        HashSet<Integer> check = new HashSet<>();
-        for(int i=0;i<nums.length;i++)
-        {
-            if(check.contains(nums[i]))
-        }
-        return false;
-            {
-                return true;
-            }else{
-                check.add(nums[i]);
-            }
-    }
+class Solution {
+    public boolean isMonotonic(int[] nums) 
+    {
+        HashSet<Integer> check = new HashSet<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            if(check.contains(nums[i]))
+            {
+                return true;
+            }else{
+                check.add(nums[i]);
+            }
+        }
+        return false;
+    }
 }
-
 ```
 
 ---
