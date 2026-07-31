@@ -1,17 +1,5 @@
 class Solution {
-    public int arrangeCoins(int n) 
-    {
-        long count = 0;
-        for(int i = 1; i<=n ; i++)
-        {
-            count = count + i;
-            
-            if(count>n)
-            {
-                i = i-1;
-                return i;
-            }
-        }
-        return 1;
+    public int arrangeCoins(int n) {
+        return (int)((Math.sqrt(8.0 * n + 1) - 1) / 2);
     }
 }
