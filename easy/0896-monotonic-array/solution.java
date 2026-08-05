@@ -8,7 +8,7 @@ class Solution {
        {
         while(l<r)
         {
-           if(nums[l]> nums[l+1])
+           if(nums[l]> nums[r])
            {
            return false; 
            }
@@ -22,7 +22,7 @@ class Solution {
        else if( nums[l] > nums[r] ){
         while(l<r)
         {
-           if(nums[l] < nums[l+1])
+           if(nums[l] < nums[r])
            {
            return false; 
            }else{
@@ -31,18 +31,6 @@ class Solution {
         }
         return true;
        }
-       else if(nums[l]==nums[r]) {
-         while(l<r)
-        {
-           if(nums[l] != nums[r])
-           {
-           return false; 
-           }else{
-            l++;
-           }
-        }
         return true;
-       }
-        return false;
     }
 }
