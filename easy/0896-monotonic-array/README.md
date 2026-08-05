@@ -39,9 +39,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 85.1 MB (beats 81.34%)  
-**Submitted:** 2026-07-31T15:38:15.332Z  
+**Runtime:** 0 ms  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-07-31T15:36:47.761Z  
 
 ```java
 class Solution {
@@ -54,7 +54,7 @@ class Solution {
        {
         while(l<r)
         {
-           if(nums[l]> nums[l+1])
+           if(nums[l]> nums[r])
            {
            return false; 
            }
@@ -68,7 +68,7 @@ class Solution {
        else if( nums[l] > nums[r] ){
         while(l<r)
         {
-           if(nums[l] < nums[l+1])
+           if(nums[l] < nums[r])
            {
            return false; 
            }else{
@@ -77,19 +77,7 @@ class Solution {
         }
         return true;
        }
-       else if(nums[l]==nums[r]) {
-         while(l<r)
-        {
-           if(nums[l] != nums[r])
-           {
-           return false; 
-           }else{
-            l++;
-           }
-        }
         return true;
-       }
-        return false;
     }
 }
 ```
